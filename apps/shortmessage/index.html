@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/static/lib/css//bootstrap.min.css">
+  <link rel="stylesheet" href="/static/lib/css/keen-dashboards.css">
+  <link rel="stylesheet" href="/static/lib/css/dc.min.css">
+  <link rel="stylesheet" href="/static/lib/css/leaflet.css">
+  <link rel="stylesheet" href="/static/css/custom.css">
+  
+
+
+</head>
+<body class="application">
+
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="./">垃圾短信数据分析系统</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-sm-6">
+              <div class="row">
+                  <div class="col-sm-12">
+                      <div class="chart-wrapper">
+                          <div class="chart-title">
+                              Map
+                          </div>
+                          <div class="chart-stage">
+                              <div id="map" style="width: 650px; height: 660px"></div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-sm-6">
+              <div class="row">
+                  <div class="col-sm-12">
+                      <div class="chart-wrapper">
+                          <div class="chart-title">
+                              Number of shortmessage
+                          </div>
+                          <div class="chart-stage">
+                              <div id="date-chart"></div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-sm-4">
+                      <div class="chart-wrapper">
+                          <div class="chart-title">
+                              Phone Number
+                          </div>
+                          <div class="chart-stage">
+                              <div id="phone-number-chart"></div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-sm-8">
+                      <div class="row">
+                          <div class="col-sm-6">
+                              <div class="chart-wrapper">
+                                  <div class="chart-title">
+                                      Location
+                                  </div>
+                                  <div class="chart-stage">
+                                      <div id="location-row-chart"></div>
+                                  </div>
+                              </div>
+                          </div>
+
+                          <div class="col-sm-6">
+                              <div class="chart-wrapper">
+                                  <div class="chart-title">
+                                      Topic
+                                  </div>
+                                  <div class="chart-stage">
+                                      <div id="topic-row-chart"></div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-sm-12">
+                              <div class="chart-wrapper">
+                                  <div class="chart-title">
+                                      Number
+                                  </div>
+                                  <div class="chart-stage">
+                                      <div id="number-records-nd"></div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <hr>
+  <p class="small text-muted">版权：中国石油大学（华东）可视分析小组</p>
+  <p class="small text-muted">联系人：李昕 &nbsp;&nbsp;&nbsp;  邮箱：lix@upc.edu.cn</p>
+
+  <script src="/static/lib/js/jquery.min.js"></script>
+  <script src="/static/lib/js/bootstrap.min.js"></script>
+  <script src="/static/lib/js/underscore-min.js"></script>
+  <script src="/static/lib/js/crossfilter.js"></script>
+  <script src="/static/lib/js/d3.min.js"></script>
+  <script src="/static/lib/js/dc.min.js"></script>
+  <script src="/static/lib/js/queue.js"></script>
+  <script src="/static/lib/js/leaflet.js"></script>
+  <script src="/static/lib/js/leaflet-heat.js"></script>
+  <script src="/static/lib/js/keen.min.js"></script>
+  <script src='./graphs0.js' type='text/javascript'></script>
+
+</body>
+</html>
