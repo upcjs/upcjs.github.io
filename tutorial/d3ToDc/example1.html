@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>d3ToDc 样例1</title>
+        <script type="text/javascript" src="../static/lib/js/d3.v3.js"></script>
+    </head>
+    <body>
+	<button id="btnRefresh">刷新</button>
+	<div id="mychart"></div>
+	<script>
+	var dataset = [ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13,11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ];
+	var w=400;
+	var h=250; 
+	var barPadding = 1;
+	
+	var xScale=d3.scale.ordinal()// x是序数比例尺
+     .domain(d3.range(dataset.length))  
+     .rangeRoundBands([0,w],0.05); 
+	var yScale=d3.scale.linear()// y仍然是线性比例尺
+    .domain([0,d3.max(dataset)])
+    .range([0,h]);
+	
+	var svg = d3.select("#mychart")// 选中DOM中的目标元素
+    .append("svg")// 为目标元素附加上一个svg子元素
+    .attr("width", w)// 设置这个svg的宽
+    .attr("height", h);// 设置这个svg的高
+	
+	var createChart = function(dataset){
+    svg.selectAll("rect")// 选中空元素，表示即将创建这样的元素
+        .data(dataset)// 对此后的方法都执行dataset.length次迭代
+        .enter()// 数据元素值比前面选中的DOM元素多就创建一个新的DOM元素
+        .append("rect")// 取得enter的占位元素，并把rect追加到对应的DOM中
+        .attr("x", function(d, i) {// 设置横坐标
+            //return i * (w / dataset.length); // 从0开始每次右移元素宽那么长(w / dataset.length)
+            return xScale(i);// 这里使用序数比例尺，自己去找刚才划分好的档位
+        })
+        .attr("y", function(d) {// 设置纵坐标，纵坐标正方向是从上往下的，所以条有多长就要设置起点是相对于h再向上移动条长
+            return h - yScale(d);
+        })
+        //.attr("width", w / dataset.length - barPadding)// 设置元素宽，留出间隙宽barPadding。
+        .attr("width", xScale.rangeBand())// 这里xScale比例尺已经设置间距了所以直接用
+        .attr("height", function(d) {
+            return yScale(d);
+        })
+        .attr("fill", function(d) {//设置RGB颜色与数值的关系
+            return "rgb(0, 0, " + (d * 10) + ")";
+        });
+	}
+	createChart(dataset);
+	
+	var updateChart = function(dataset){
+		yScale.domain([0,d3.max(dataset)])
+		svg.selectAll("rect")// 选中空元素，表示即将创建这样的元素
+          .data(dataset)// 对此后的方法都执行dataset.length次迭代
+          .attr("x", function(d, i) {// 设置横坐标
+            //return i * (w / dataset.length); // 从0开始每次右移元素宽那么长(w / dataset.length)
+            return xScale(i);// 这里使用序数比例尺，自己去找刚才划分好的档位
+        })
+        .attr("y", function(d) {// 设置纵坐标，纵坐标正方向是从上往下的，所以条有多长就要设置起点是相对于h再向上移动条长
+            return h - yScale(d);
+        })
+        //.attr("width", w / dataset.length - barPadding)// 设置元素宽，留出间隙宽barPadding。
+        .attr("width", xScale.rangeBand())// 这里xScale比例尺已经设置间距了所以直接用
+        .attr("height", function(d) {
+            return yScale(d);
+        })
+        .attr("fill", function(d) {//设置RGB颜色与数值的关系
+            return "rgb(0, 0, " + (d * 10) + ")";
+        });
+	}
+//	var createDB = function(numValues){
+//		dataset=[];
+//		var maxValue=100;
+//		for(var i=0;i<numValues;i++){
+//			var newNumber=Math.floor(Math.random()*maxValue);//0-100的整数
+//			dataset.push(newNumber);
+//		}
+//		return dataset;
+//	}
+    var dataset=[ 15, 20, 23, 29, 11, 15, 22, 18, 15, 23,21, 22, 25, 10, 28, 27, 16, 18, 13, 35 ];
+	d3.select("#btnRefresh")
+	.on("click",function(){
+//		dataset = createDB(dataset.length);
+  		updateChart(dataset);
+	});
+	</script>
+	</body>
+</html>

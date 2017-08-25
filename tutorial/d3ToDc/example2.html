@@ -1,0 +1,134 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>d3ToDc 样例2</title>
+    <script type="text/javascript" src="../static/lib/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/lib/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../static/lib/js/underscore-min.js"></script>
+    <script type="text/javascript" src="../static/lib/js/d3.v3.js"></script>
+    <script type="text/javascript" src="../static/lib/js/crossfilter.js"></script>
+    <script type="text/javascript" src="../static/lib/js/dc.js"></script>
+    <script type="text/javascript" src="../static/lib/js/queue.js"></script>
+</head>
+<body>
+<button id="btnRefresh">刷新</button>
+<div id="mychart"></div>
+<script>
+    dc.lxBarChart = function (parent, chartGroup) {
+        var _chart = dc.baseMixin({});
+        var _g,xScale,yScale;
+        _chart._doRender = function () {
+            _chart.resetSvg();
+            _g = _chart.svg().append('g');
+            xScale = d3.scale.ordinal()
+                .domain(d3.range(dataset.length))
+                .rangeRoundBands([0, _chart.width()], 0.05);//_chart.width()是svg画布的宽度
+            yScale = d3.scale.linear()
+                .domain([0, d3.max(dataset)])
+                .range([0, _chart.height()]);//_chart.height()是svg画布的高度
+            drawChart();
+            return _chart;
+        };
+        _chart._doRedraw = function () {
+            drawChart();
+            return _chart;
+        };
+        var drawRars= function (bars) {
+            bars
+                .attr("x", function (d, i) {  return xScale(i);  })
+                .attr("y", function (d) {  return _chart.height() - yScale(d);})//这里使用了height
+                .attr("width", xScale.rangeBand())
+                .attr("height", function (d) {   return yScale(d);    })
+                .attr("fill", function (d) {  return "rgb(0, 0, " + (d * 10) + ")";    });
+        };
+        var createChart = function () {
+            var bars = _g.selectAll("rect")
+                .data(_chart.dimension())//将dimension作为数据源
+                .enter()
+                .append("rect");
+            drawRars(bars);
+        };
+        var updateChart = function () {
+            yScale.domain([0, d3.max(_chart.dimension())]);//求dimension中的最大值
+            var bars = _g.selectAll("rect")// 选中空元素，表示即将创建这样的元素
+                .data(_chart.dimension())//将dimension作为数据源
+                .transition()//(9)加上过渡动画
+                .delay(function(d,i){
+                    return  i/_chart.dimension().length*1000;
+                })//指定过度什么时间开始，可以用函数控制每一条的动画时间，这样就可得到钢琴版的效果
+                .duration(2000)//(10)加上动画的持续时间，以毫秒计算
+                .ease("linear");//(11)缓动函数：有circle（加速）elastic（伸缩），linear（匀速），bounce（弹跳）
+            drawRars(bars);
+        };
+        var drawText = function (texts) {
+           texts
+               .text(function(d) {
+                   return d;
+               })
+               .attr("text-anchor", "middle")
+               .attr("x", function(d, i) {
+                   return xScale(i)+xScale.rangeBand()/2;
+               })
+               .attr("y", function(d) {
+                   return _chart.height() - yScale(d) + 14;
+               })
+               .attr("font-family", "sans-serif")
+               .attr("font-size", "12px")
+               .attr("fill", "yellow");
+        };
+        var createText = function () {
+            var texts = _g.selectAll("text")
+                .data(_chart.dimension())//将dimension作为数据源
+                .enter()
+                .append("text");
+            drawText(texts);
+        };
+        var updateText = function () {
+            var texts = _g.selectAll("text")
+                .data(_chart.dimension())//将dimension作为数据源
+                .transition()//(9)加上过渡动画
+                .delay(function(d,i){
+                    return  i/_chart.dimension().length*1000;
+                })//指定过度什么时间开始，可以用函数控制每一条的动画时间，这样就可得到钢琴版的效果
+                .duration(2000)//(10)加上动画的持续时间，以毫秒计算
+                .ease("linear");//(11)缓动函数：有circle（加速）elastic（伸缩），linear（匀速），bounce（弹跳）
+            drawText(texts);
+        };
+        var drawChart = function () {
+            createChart();
+            createText();
+            updateChart();
+            updateText();
+        };
+        return _chart.anchor(parent, chartGroup);
+    };
+</script>
+<script>
+    var dataset = [5, 10, 13, 19, 21, 25, 22, 18, 15, 13, 11, 12, 15, 20, 18, 17, 16, 18, 23, 25];
+
+    var barchart = dc.lxBarChart("#mychart");
+    barchart
+        .width(400)
+        .height(250)
+        .group({})
+        .dimension(dataset);
+    var createDB = function(numValues){
+        dataset=[];
+        var maxValue=100;
+        for(var i=0;i<numValues;i++){
+            var newNumber=Math.floor(Math.random()*maxValue);//0-100的整数
+            dataset.push(newNumber);
+        }
+        return dataset;
+    };
+    d3.select("#btnRefresh")
+        .on("click",function(){
+            dataset = createDB(dataset.length);
+            barchart.dimension(dataset);
+            barchart.redraw();
+        });
+
+    dc.renderAll();
+</script>
+</body>
+</html>
