@@ -1,0 +1,596 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title>Word</title>
+  <!--<link rel="stylesheet" href="https:/maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+  <!--<script src="https:/ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+  <!--<script src="https:/maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+  <!--<script src="js/jquery.js"></script>-->
+    <script type = "text/javascript" src = "../static/js/jquery.js" ></script>
+    <link rel="stylesheet" href="../static/css/choices.css" >
+    <link rel="stylesheet" href="https:/www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https:/www.w3schools.com/lib/w3-theme-black.css">
+</head>
+<body>
+<div class="w3-top">
+    <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+        <div class="w3-bar-item w3-button w3-hide-small w3-hover-white">
+            (<a href="../index.html">Homepage</a> )
+        </div>
+        <div class="w3-button w3-hide-small w3-hover-white">
+            Click the figures to hear the sound, then input your anwer.
+        </div>
+    </div>
+</div>
+<hr>
+<br>
+
+<div style="width: 290px; height: 330px; padding-top: 0px; padding-bottom: 0px; display: inline-block;">
+    <div ><b> 1</b>.<input width="100%" name="answercloud"type="text" placeholder="Answer"></div>
+<audio id="player0" src="https:/media.merriam-webster.com/audio/prons/en/us/mp3/c/cloud001.mp3"></audio>
+<img src="../static/images/cloud.jpg"style="width: 280px; height: 240px;"  onclick="document.getElementById('player0').play()">
+
+</div>
+
+<div style="width: 290px; height: 330px; padding-top: 0px; padding-bottom: 0px; display: inline-block;">
+    <div ><b> 2</b>.<input width="100%" name="answercrown"type="text" placeholder="Answer"></div>
+<audio id="player1" src="https:/media.merriam-webster.com/audio/prons/en/us/mp3/c/crown001.mp3"></audio>
+<img src="../static/images/crown.jpg"style="width: 280px; height: 240px;"  onclick="document.getElementById('player1').play()">
+
+</div>
+
+<div style="width: 290px; height: 330px; padding-top: 0px; padding-bottom: 0px; display: inline-block;">
+    <div ><b> 3</b>.<input width="100%" name="answerfrog"type="text" placeholder="Answer"></div>
+<audio id="player2" src="https:/media.merriam-webster.com/audio/prons/en/us/mp3/f/frog0001.mp3"></audio>
+<img src="../static/images/frog.jpg"style="width: 280px; height: 240px;"  onclick="document.getElementById('player2').play()">
+
+</div>
+
+<div style="width: 290px; height: 330px; padding-top: 0px; padding-bottom: 0px; display: inline-block;">
+    <div ><b> 4</b>.<input width="100%" name="answerfloat"type="text" placeholder="Answer"></div>
+<audio id="player3" src="https:/media.merriam-webster.com/audio/prons/en/us/mp3/f/float001.mp3"></audio>
+<img src="../static/images/float.jpg"style="width: 280px; height: 240px;"  onclick="document.getElementById('player3').play()">
+
+</div>
+
+<div style="width: 290px; height: 330px; padding-top: 0px; padding-bottom: 0px; display: inline-block;">
+    <div ><b> 5</b>.<input width="100%" name="answerflower"type="text" placeholder="Answer"></div>
+<audio id="player4" src="https:/media.merriam-webster.com/audio/prons/en/us/mp3/f/flower01.mp3"></audio>
+<img src="../static/images/flower.jpg"style="width: 280px; height: 240px;"  onclick="document.getElementById('player4').play()">
+
+</div>
+
+<div style="width: 290px; height: 330px; padding-top: 0px; padding-bottom: 0px; display: inline-block;">
+    <div ><b> 6</b>.<input width="100%" name="answercrack"type="text" placeholder="Answer"></div>
+<audio id="player5" src="https:/media.merriam-webster.com/audio/prons/en/us/mp3/c/crack001.mp3"></audio>
+<img src="../static/images/crack.jpg"style="width: 280px; height: 240px;"  onclick="document.getElementById('player5').play()">
+
+</div>
+
+<div style="width: 290px; height: 330px; padding-top: 0px; padding-bottom: 0px; display: inline-block;">
+    <div ><b> 7</b>.<input width="100%" name="answerfrozen"type="text" placeholder="Answer"></div>
+<audio id="player6" src="https:/media.merriam-webster.com/audio/prons/en/us/mp3/f/frozen01.mp3"></audio>
+<img src="../static/images/frozen.jpg"style="width: 280px; height: 240px;"  onclick="document.getElementById('player6').play()">
+
+</div>
+
+<div style="width: 290px; height: 330px; padding-top: 0px; padding-bottom: 0px; display: inline-block;">
+    <div ><b> 8</b>.<input width="100%" name="answerclock"type="text" placeholder="Answer"></div>
+<audio id="player7" src="https:/media.merriam-webster.com/audio/prons/en/us/mp3/c/clock001.mp3"></audio>
+<img src="../static/images/clock.jpg"style="width: 280px; height: 240px;"  onclick="document.getElementById('player7').play()">
+
+</div>
+
+<div style="width: 290px; height: 330px; padding-top: 0px; padding-bottom: 0px; display: inline-block;">
+    <div ><b> 9</b>.<input width="100%" name="answerfreckle"type="text" placeholder="Answer"></div>
+<audio id="player8" src="https:/media.merriam-webster.com/audio/prons/en/us/mp3/f/freckl01.mp3"></audio>
+<img src="../static/images/freckle.jpg"style="width: 280px; height: 240px;"  onclick="document.getElementById('player8').play()">
+
+</div>
+
+<div style="width: 290px; height: 330px; padding-top: 0px; padding-bottom: 0px; display: inline-block;">
+    <div ><b> 10</b>.<input width="100%" name="answercrackers"type="text" placeholder="Answer"></div>
+<audio id="player9" src="https:/media.merriam-webster.com/audio/prons/en/us/mp3/c/cracke06.mp3"></audio>
+<img src="../static/images/crackers.jpg"style="width: 280px; height: 240px;"  onclick="document.getElementById('player9').play()">
+
+</div>
+
+<div style="width: 290px; height: 330px; padding-top: 0px; padding-bottom: 0px; display: inline-block;">
+    <div ><b> 11</b>.<input width="100%" name="answerframe"type="text" placeholder="Answer"></div>
+<audio id="player10" src="https:/media.merriam-webster.com/audio/prons/en/us/mp3/f/frame001.mp3"></audio>
+<img src="../static/images/frame.jpg"style="width: 280px; height: 240px;"  onclick="document.getElementById('player10').play()">
+
+</div>
+
+<div style="width: 290px; height: 330px; padding-top: 0px; padding-bottom: 0px; display: inline-block;">
+    <div ><b> 12</b>.<input width="100%" name="answercrab"type="text" placeholder="Answer"></div>
+<audio id="player11" src="https:/media.merriam-webster.com/audio/prons/en/us/mp3/c/crab0001.mp3"></audio>
+<img src="../static/images/crab.jpg"style="width: 280px; height: 240px;"  onclick="document.getElementById('player11').play()">
+
+</div>
+
+<div style="width: 290px; height: 330px; padding-top: 0px; padding-bottom: 0px; display: inline-block;">
+    <div ><b> 13</b>.<input width="100%" name="answerflashlight"type="text" placeholder="Answer"></div>
+<audio id="player12" src="https:/media.merriam-webster.com/audio/prons/en/us/mp3/f/flashl02.mp3"></audio>
+<img src="../static/images/flashlight.jpg"style="width: 280px; height: 240px;"  onclick="document.getElementById('player12').play()">
+
+</div>
+
+<div style="width: 290px; height: 330px; padding-top: 0px; padding-bottom: 0px; display: inline-block;">
+    <div ><b> 14</b>.<input width="100%" name="answercry"type="text" placeholder="Answer"></div>
+<audio id="player13" src="https:/media.merriam-webster.com/audio/prons/en/us/mp3/c/cry00001.mp3"></audio>
+<img src="../static/images/cry.jpg"style="width: 280px; height: 240px;"  onclick="document.getElementById('player13').play()">
+
+</div>
+
+<div style="width: 290px; height: 330px; padding-top: 0px; padding-bottom: 0px; display: inline-block;">
+    <div ><b> 15</b>.<input width="100%" name="answercrib"type="text" placeholder="Answer"></div>
+<audio id="player14" src="https:/media.merriam-webster.com/audio/prons/en/us/mp3/c/crib0001.mp3"></audio>
+<img src="../static/images/crib.jpg"style="width: 280px; height: 240px;"  onclick="document.getElementById('player14').play()">
+
+</div>
+
+<div style="width: 290px; height: 330px; padding-top: 0px; padding-bottom: 0px; display: inline-block;">
+    <div ><b> 16</b>.<input width="100%" name="answerfruit"type="text" placeholder="Answer"></div>
+<audio id="player15" src="https:/media.merriam-webster.com/audio/prons/en/us/mp3/f/fruit001.mp3"></audio>
+<img src="../static/images/fruit.jpg"style="width: 280px; height: 240px;"  onclick="document.getElementById('player15').play()">
+
+</div>
+
+<div style="width: 290px; height: 330px; padding-top: 0px; padding-bottom: 0px; display: inline-block;">
+    <div ><b> 17</b>.<input width="100%" name="answerclap"type="text" placeholder="Answer"></div>
+<audio id="player16" src="https:/media.merriam-webster.com/audio/prons/en/us/mp3/c/clap0001.mp3"></audio>
+<img src="../static/images/clap.jpg"style="width: 280px; height: 240px;"  onclick="document.getElementById('player16').play()">
+
+</div>
+
+<div style="width: 290px; height: 330px; padding-top: 0px; padding-bottom: 0px; display: inline-block;">
+    <div ><b> 18</b>.<input width="100%" name="answerclimb"type="text" placeholder="Answer"></div>
+<audio id="player17" src="https:/media.merriam-webster.com/audio/prons/en/us/mp3/c/climb001.mp3"></audio>
+<img src="../static/images/climb.jpg"style="width: 280px; height: 240px;"  onclick="document.getElementById('player17').play()">
+
+</div>
+
+<div style="width: 290px; height: 330px; padding-top: 0px; padding-bottom: 0px; display: inline-block;">
+    <div ><b> 19</b>.<input width="100%" name="answerclown"type="text" placeholder="Answer"></div>
+<audio id="player18" src="https:/media.merriam-webster.com/audio/prons/en/us/mp3/c/clown001.mp3"></audio>
+<img src="../static/images/clown.jpg"style="width: 280px; height: 240px;"  onclick="document.getElementById('player18').play()">
+
+</div>
+
+<div style="width: 290px; height: 330px; padding-top: 0px; padding-bottom: 0px; display: inline-block;">
+    <div ><b> 20</b>.<input width="100%" name="answerfly"type="text" placeholder="Answer"></div>
+<audio id="player19" src="https:/media.merriam-webster.com/audio/prons/en/us/mp3/f/fly00001.mp3"></audio>
+<img src="../static/images/fly.jpg"style="width: 280px; height: 240px;"  onclick="document.getElementById('player19').play()">
+
+</div>
+
+<div style="width: 290px; height: 330px; padding-top: 0px; padding-bottom: 0px; display: inline-block;">
+    <div ><b> 21</b>.<input width="100%" name="answerclip"type="text" placeholder="Answer"></div>
+<audio id="player20" src="https:/media.merriam-webster.com/audio/prons/en/us/mp3/c/clip0001.mp3"></audio>
+<img src="../static/images/clip.jpg"style="width: 280px; height: 240px;"  onclick="document.getElementById('player20').play()">
+
+</div>
+
+<div style="width: 290px; height: 330px; padding-top: 0px; padding-bottom: 0px; display: inline-block;">
+    <div ><b> 22</b>.<input width="100%" name="answercrayon"type="text" placeholder="Answer"></div>
+<audio id="player21" src="https:/media.merriam-webster.com/audio/prons/en/us/mp3/c/crayon01.mp3"></audio>
+<img src="../static/images/crayon.jpg"style="width: 280px; height: 240px;"  onclick="document.getElementById('player21').play()">
+
+</div>
+
+<div style="width: 290px; height: 330px; padding-top: 0px; padding-bottom: 0px; display: inline-block;">
+    <div ><b> 23</b>.<input width="100%" name="answerflag"type="text" placeholder="Answer"></div>
+<audio id="player22" src="https:/media.merriam-webster.com/audio/prons/en/us/mp3/f/flag0001.mp3"></audio>
+<img src="../static/images/flag.jpg"style="width: 280px; height: 240px;"  onclick="document.getElementById('player22').play()">
+
+</div>
+
+<div style="width: 290px; height: 330px; padding-top: 0px; padding-bottom: 0px; display: inline-block;">
+    <div ><b> 24</b>.<input width="100%" name="answerfry"type="text" placeholder="Answer"></div>
+<audio id="player23" src="https:/media.merriam-webster.com/audio/prons/en/us/mp3/f/fry00001.mp3"></audio>
+<img src="../static/images/fry.jpg"style="width: 280px; height: 240px;"  onclick="document.getElementById('player23').play()">
+
+</div>
+
+
+<br/>
+<br/>
+
+<div id="category1" style="display:none;">
+<p>
+<strong>word 1:</strong> The correct answer is the <strong>cloud</strong>.</p>
+</div>
+
+<div id="category2" style="display:none;">
+<p>
+<strong>word 2:</strong> The correct answer is the <strong>crown</strong>.</p>
+</div>
+
+<div id="category3" style="display:none;">
+<p>
+<strong>word 3:</strong> The correct answer is the <strong>frog</strong>.</p>
+</div>
+
+<div id="category4" style="display:none;">
+<p>
+<strong>word 4:</strong> The correct answer is the <strong>float</strong>.</p>
+</div>
+
+<div id="category5" style="display:none;">
+<p>
+<strong>word 5:</strong> The correct answer is the <strong>flower</strong>.</p>
+</div>
+
+<div id="category6" style="display:none;">
+<p>
+<strong>word 6:</strong> The correct answer is the <strong>crack</strong>.</p>
+</div>
+
+<div id="category7" style="display:none;">
+<p>
+<strong>word 7:</strong> The correct answer is the <strong>frozen</strong>.</p>
+</div>
+
+<div id="category8" style="display:none;">
+<p>
+<strong>word 8:</strong> The correct answer is the <strong>clock</strong>.</p>
+</div>
+
+<div id="category9" style="display:none;">
+<p>
+<strong>word 9:</strong> The correct answer is the <strong>freckle</strong>.</p>
+</div>
+
+<div id="category10" style="display:none;">
+<p>
+<strong>word 10:</strong> The correct answer is the <strong>crackers</strong>.</p>
+</div>
+
+<div id="category11" style="display:none;">
+<p>
+<strong>word 11:</strong> The correct answer is the <strong>frame</strong>.</p>
+</div>
+
+<div id="category12" style="display:none;">
+<p>
+<strong>word 12:</strong> The correct answer is the <strong>crab</strong>.</p>
+</div>
+
+<div id="category13" style="display:none;">
+<p>
+<strong>word 13:</strong> The correct answer is the <strong>flashlight</strong>.</p>
+</div>
+
+<div id="category14" style="display:none;">
+<p>
+<strong>word 14:</strong> The correct answer is the <strong>cry</strong>.</p>
+</div>
+
+<div id="category15" style="display:none;">
+<p>
+<strong>word 15:</strong> The correct answer is the <strong>crib</strong>.</p>
+</div>
+
+<div id="category16" style="display:none;">
+<p>
+<strong>word 16:</strong> The correct answer is the <strong>fruit</strong>.</p>
+</div>
+
+<div id="category17" style="display:none;">
+<p>
+<strong>word 17:</strong> The correct answer is the <strong>clap</strong>.</p>
+</div>
+
+<div id="category18" style="display:none;">
+<p>
+<strong>word 18:</strong> The correct answer is the <strong>climb</strong>.</p>
+</div>
+
+<div id="category19" style="display:none;">
+<p>
+<strong>word 19:</strong> The correct answer is the <strong>clown</strong>.</p>
+</div>
+
+<div id="category20" style="display:none;">
+<p>
+<strong>word 20:</strong> The correct answer is the <strong>fly</strong>.</p>
+</div>
+
+<div id="category21" style="display:none;">
+<p>
+<strong>word 21:</strong> The correct answer is the <strong>clip</strong>.</p>
+</div>
+
+<div id="category22" style="display:none;">
+<p>
+<strong>word 22:</strong> The correct answer is the <strong>crayon</strong>.</p>
+</div>
+
+<div id="category23" style="display:none;">
+<p>
+<strong>word 23:</strong> The correct answer is the <strong>flag</strong>.</p>
+</div>
+
+<div id="category24" style="display:none;">
+<p>
+<strong>word 24:</strong> The correct answer is the <strong>fry</strong>.</p>
+</div>
+
+
+
+<div id="allcorrect" style="display:none;">
+<p>
+You answered them all right!</p>
+</div>
+<div id="results">
+    Show me the answers!
+</div>
+</body>
+<script>
+  $(document).ready(function()
+{    $("#results").click(function() {
+var answers = [];
+
+var x = document.getElementById("category1");
+x.style.display = "none";
+answers.push($("input[@name=answercloud]").val())
+
+var x = document.getElementById("category2");
+x.style.display = "none";
+answers.push($("input[@name=answercrown]").val())
+
+var x = document.getElementById("category3");
+x.style.display = "none";
+answers.push($("input[@name=answerfrog]").val())
+
+var x = document.getElementById("category4");
+x.style.display = "none";
+answers.push($("input[@name=answerfloat]").val())
+
+var x = document.getElementById("category5");
+x.style.display = "none";
+answers.push($("input[@name=answerflower]").val())
+
+var x = document.getElementById("category6");
+x.style.display = "none";
+answers.push($("input[@name=answercrack]").val())
+
+var x = document.getElementById("category7");
+x.style.display = "none";
+answers.push($("input[@name=answerfrozen]").val())
+
+var x = document.getElementById("category8");
+x.style.display = "none";
+answers.push($("input[@name=answerclock]").val())
+
+var x = document.getElementById("category9");
+x.style.display = "none";
+answers.push($("input[@name=answerfreckle]").val())
+
+var x = document.getElementById("category10");
+x.style.display = "none";
+answers.push($("input[@name=answercrackers]").val())
+
+var x = document.getElementById("category11");
+x.style.display = "none";
+answers.push($("input[@name=answerframe]").val())
+
+var x = document.getElementById("category12");
+x.style.display = "none";
+answers.push($("input[@name=answercrab]").val())
+
+var x = document.getElementById("category13");
+x.style.display = "none";
+answers.push($("input[@name=answerflashlight]").val())
+
+var x = document.getElementById("category14");
+x.style.display = "none";
+answers.push($("input[@name=answercry]").val())
+
+var x = document.getElementById("category15");
+x.style.display = "none";
+answers.push($("input[@name=answercrib]").val())
+
+var x = document.getElementById("category16");
+x.style.display = "none";
+answers.push($("input[@name=answerfruit]").val())
+
+var x = document.getElementById("category17");
+x.style.display = "none";
+answers.push($("input[@name=answerclap]").val())
+
+var x = document.getElementById("category18");
+x.style.display = "none";
+answers.push($("input[@name=answerclimb]").val())
+
+var x = document.getElementById("category19");
+x.style.display = "none";
+answers.push($("input[@name=answerclown]").val())
+
+var x = document.getElementById("category20");
+x.style.display = "none";
+answers.push($("input[@name=answerfly]").val())
+
+var x = document.getElementById("category21");
+x.style.display = "none";
+answers.push($("input[@name=answerclip]").val())
+
+var x = document.getElementById("category22");
+x.style.display = "none";
+answers.push($("input[@name=answercrayon]").val())
+
+var x = document.getElementById("category23");
+x.style.display = "none";
+answers.push($("input[@name=answerflag]").val())
+
+var x = document.getElementById("category24");
+x.style.display = "none";
+answers.push($("input[@name=answerfry]").val())
+
+function isAnswered(currentValue) {
+  return currentValue != "";
+}
+if(!answers.every(isAnswered))
+{
+alert("You're not done yet!");
+}
+else{
+var wrong =0;
+
+
+if(answers[0] != "cloud")
+{
+$("#category1").show("slow");
+wrong++;
+}
+
+if(answers[1] != "crown")
+{
+$("#category2").show("slow");
+wrong++;
+}
+
+if(answers[2] != "frog")
+{
+$("#category3").show("slow");
+wrong++;
+}
+
+if(answers[3] != "float")
+{
+$("#category4").show("slow");
+wrong++;
+}
+
+if(answers[4] != "flower")
+{
+$("#category5").show("slow");
+wrong++;
+}
+
+if(answers[5] != "crack")
+{
+$("#category6").show("slow");
+wrong++;
+}
+
+if(answers[6] != "frozen")
+{
+$("#category7").show("slow");
+wrong++;
+}
+
+if(answers[7] != "clock")
+{
+$("#category8").show("slow");
+wrong++;
+}
+
+if(answers[8] != "freckle")
+{
+$("#category9").show("slow");
+wrong++;
+}
+
+if(answers[9] != "crackers")
+{
+$("#category10").show("slow");
+wrong++;
+}
+
+if(answers[10] != "frame")
+{
+$("#category11").show("slow");
+wrong++;
+}
+
+if(answers[11] != "crab")
+{
+$("#category12").show("slow");
+wrong++;
+}
+
+if(answers[12] != "flashlight")
+{
+$("#category13").show("slow");
+wrong++;
+}
+
+if(answers[13] != "cry")
+{
+$("#category14").show("slow");
+wrong++;
+}
+
+if(answers[14] != "crib")
+{
+$("#category15").show("slow");
+wrong++;
+}
+
+if(answers[15] != "fruit")
+{
+$("#category16").show("slow");
+wrong++;
+}
+
+if(answers[16] != "clap")
+{
+$("#category17").show("slow");
+wrong++;
+}
+
+if(answers[17] != "climb")
+{
+$("#category18").show("slow");
+wrong++;
+}
+
+if(answers[18] != "clown")
+{
+$("#category19").show("slow");
+wrong++;
+}
+
+if(answers[19] != "fly")
+{
+$("#category20").show("slow");
+wrong++;
+}
+
+if(answers[20] != "clip")
+{
+$("#category21").show("slow");
+wrong++;
+}
+
+if(answers[21] != "crayon")
+{
+$("#category22").show("slow");
+wrong++;
+}
+
+if(answers[22] != "flag")
+{
+$("#category23").show("slow");
+wrong++;
+}
+
+if(answers[23] != "fry")
+{
+$("#category24").show("slow");
+wrong++;
+}
+
+
+
+if (wrong==0) { $("#allcorrect").show("slow"); };
+{ $("#closing").show("slow"); };
+}
+    });});
+</script>
+</html>
